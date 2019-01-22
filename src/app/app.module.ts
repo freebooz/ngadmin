@@ -9,6 +9,9 @@ import { ProductCateListComponent } from './db/view/product-cate-list/product-ca
 import { ProductCateEditComponent } from './db/view/product-cate-edit/product-cate-edit.component';
 import { HomeComponent } from './page/home/home.component';
 import { MainComponent } from './page/main/main.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+// import { MatButtonModule, MatCheckboxModule } from '@angular/material';
+// import 'rxjs';
 
 @NgModule({
   declarations: [
@@ -22,6 +25,9 @@ import { MainComponent } from './page/main/main.component';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
+    // MatButtonModule, 
+    // MatCheckboxModule,
     AppRoutingModule
   ],
   providers: [],
