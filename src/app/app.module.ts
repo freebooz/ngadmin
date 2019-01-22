@@ -14,13 +14,14 @@ import { LoginComponent } from './page/login/login.component';
 import { RegisterComponent } from './page/register/register.component';
 import { ForgotPasswordComponent } from './page/forgot-password/forgot-password.component';
 import { AuthComponent } from './page/auth/auth.component';
-import { AsideRightComponent } from './layout/aside-right/aside-right.component';
+import { AsideRightComponent } from './layout/aside/aside-right/aside-right.component';
 import { FooterComponent } from './layout/footer/footer.component';
 import { HeaderComponent } from './layout/header/header.component';
-import { AsideLeftComponent } from './layout/aside-left/aside-left.component';
+import { AsideLeftComponent } from './layout/aside/aside-left/aside-left.component';
 import { TopbarComponent } from './layout/header/topbar/topbar.component';
 import { NotificationComponent } from './layout/header/notification/notification.component';
 import { UserProfileComponent } from './layout/header/user-profile/user-profile.component';
+import { MenuSectionComponent } from './layout/aside/menu-section/menu-section.component';
 
 @NgModule({
   declarations: [
@@ -40,7 +41,8 @@ import { UserProfileComponent } from './layout/header/user-profile/user-profile.
     AsideLeftComponent,
     TopbarComponent,
     NotificationComponent,
-    UserProfileComponent
+    UserProfileComponent,
+    MenuSectionComponent
   ],
   imports: [
     BrowserModule,
