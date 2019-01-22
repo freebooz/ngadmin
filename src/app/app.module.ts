@@ -3,10 +3,12 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ProductListComponent } from './view/product-list/product-list.component';
-import { ProductEditComponent } from './view/product-edit/product-edit.component';
-import { ProductCateListComponent } from './view/product-cate-list/product-cate-list.component';
-import { ProductCateEditComponent } from './view/product-cate-edit/product-cate-edit.component';
+import { ProductListComponent } from './db/view/product-list/product-list.component';
+import { ProductEditComponent } from './db/view/product-edit/product-edit.component';
+import { ProductCateListComponent } from './db/view/product-cate-list/product-cate-list.component';
+import { ProductCateEditComponent } from './db/view/product-cate-edit/product-cate-edit.component';
+import { HomeComponent } from './page/home/home.component';
+import { MainComponent } from './page/main/main.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +16,9 @@ import { ProductCateEditComponent } from './view/product-cate-edit/product-cate-
     ProductListComponent,
     ProductEditComponent,
     ProductCateListComponent,
-    ProductCateEditComponent
+    ProductCateEditComponent,
+    HomeComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
