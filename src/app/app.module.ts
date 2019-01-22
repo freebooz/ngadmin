@@ -7,7 +7,7 @@ import { ProductListComponent } from './content/view/product-list/product-list.c
 import { ProductEditComponent } from './content/view/product-edit/product-edit.component';
 import { ProductCateListComponent } from './content/view/product-cate-list/product-cate-list.component';
 import { ProductCateEditComponent } from './content/view/product-cate-edit/product-cate-edit.component';
-import { MainComponent } from './page/main/main.component';
+import { MainComponent } from './page/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from '@angular/material';
 import { LoginComponent } from './page/login/login.component';
