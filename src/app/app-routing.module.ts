@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ProductListComponent } from './db/view/product-list/product-list.component'
+import { ProductListComponent } from './content/view/product-list/product-list.component'
 
 const routes: Routes = [
   { path: 'products', component: ProductListComponent },
