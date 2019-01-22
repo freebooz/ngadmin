@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ProductListComponent } from './content/view/product-list/product-list.component';
@@ -25,7 +25,7 @@ import { MenuSectionComponent } from './layout/aside/menu-section/menu-section.c
 
 @NgModule({
   declarations: [
-    AppComponent,
+    AppComponent,    
     ProductListComponent,
     ProductEditComponent,
     ProductCateListComponent,
@@ -46,9 +46,10 @@ import { MenuSectionComponent } from './layout/aside/menu-section/menu-section.c
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    MatButtonModule, 
+    MatButtonModule,
     MatCheckboxModule,
     MatToolbarModule,
     MatSidenavModule,
