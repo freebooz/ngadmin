@@ -1,20 +1,38 @@
-<p>
-  main works!
-</p>
 <mat-toolbar>
-  <span>My Application</span>
+  <span>***系统后台管理</span>
+  <button type="button" mat-button (click)="drawer.toggle()">
+    Toggle sidenav
+  </button>
 </mat-toolbar>
-<!-- <mat-drawer-container class="example-container" autosize>
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-    <p>Auto-resizing sidenav</p>
-    <p *ngIf="showFiller">Lorem, ipsum dolor sit amet consectetur.</p>
-    <button (click)="showFiller = !showFiller" mat-raised-button>
-      Toggle extra text
-    </button>
+<mat-drawer-container class="example-container" autosize>
+  <mat-drawer #drawer class="drawer-sidenav" mode="side">
+    <mat-list>
+      <h3 mat-subheader>Folders</h3>
+      <mat-list-item *ngFor="let folder of folders">
+        <mat-icon mat-list-icon>folder</mat-icon>
+        <h4 mat-line>{{folder.name}}</h4>
+        <p mat-line> {{folder.updated | date}} </p>
+      </mat-list-item>
+      <mat-divider></mat-divider>
+      <h3 mat-subheader>Notes</h3>
+      <mat-list-item *ngFor="let note of notes">
+        <mat-icon mat-list-icon>note</mat-icon>
+        <h4 mat-line>{{note.name}}</h4>
+        <p mat-line> {{note.updated | date}} </p>
+      </mat-list-item>
+    </mat-list>
+    <mat-action-list>
+      <button mat-list-item (click)="save()"> Save </button>
+      <button mat-list-item (click)="undo()"> Undo </button>
+    </mat-action-list>
+    <mat-list-item>
+      <a routerLink="products">商品信息</a>
+    </mat-list-item>
+    <mat-list-item>
+      <a routerLink="dashboard">Dashboard</a>
+    </mat-list-item>
   </mat-drawer>
-  <div class="example-sidenav-content">
-    <button type="button" mat-button (click)="drawer.toggle()">
-      Toggle sidenav
-    </button>
+  <div class="drawer-sidenav-content">
+    <router-outlet></router-outlet>
   </div>
-</mat-drawer-container> -->
+</mat-drawer-container>

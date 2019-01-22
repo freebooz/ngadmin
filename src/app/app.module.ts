@@ -7,11 +7,9 @@ import { ProductListComponent } from './db/view/product-list/product-list.compon
 import { ProductEditComponent } from './db/view/product-edit/product-edit.component';
 import { ProductCateListComponent } from './db/view/product-cate-list/product-cate-list.component';
 import { ProductCateEditComponent } from './db/view/product-cate-edit/product-cate-edit.component';
-import { HomeComponent } from './page/home/home.component';
 import { MainComponent } from './page/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-// import { MatButtonModule, MatCheckboxModule } from '@angular/material';
-// import 'rxjs';
+import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from '@angular/material';
 
 @NgModule({
   declarations: [
@@ -20,15 +18,18 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductEditComponent,
     ProductCateListComponent,
     ProductCateEditComponent,
-    HomeComponent,
     MainComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    // MatButtonModule, 
-    // MatCheckboxModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MatButtonModule, 
+    MatCheckboxModule,
+    MatToolbarModule,
+    MatSidenavModule,
+    MatListModule,
+    MatIconModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
