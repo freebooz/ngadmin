@@ -79,12 +79,15 @@
             "tsConfig": "src/tsconfig.spec.json",
             "karmaConfig": "src/karma.conf.js",
             "styles": [
-              "src/styles.css"
+              "src/styles.css",
+              "scripts.bundle.js"
             ],
-            "scripts": [],
+            "scripts": [
+              "src/assets/default/scripts.bundle.js"
+            ],
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/assets/default/style.bundle.css"
             ]
           }
         },
