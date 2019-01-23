@@ -16,7 +16,7 @@ import { PerfectScrollbarModule } from 'ngx-perfect-scrollbar';
 		CommonModule,
 		NgbModule,
 		CoreModule,
-		HighlightModule.forRoot({ theme: 'googlecode' }),
+		// HighlightModule.forRoot({ theme: 'googlecode' }),
 		PerfectScrollbarModule,
 
 		// material modules

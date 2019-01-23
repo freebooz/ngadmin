@@ -22,7 +22,7 @@ const routes: Routes = [
 			{
 				path: '',
 				loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
-			},
+			}
 			// {
 			// 	path: 'mail',
 			// 	loadChildren: './components/apps/mail/mail.module#MailModule'
@@ -55,14 +55,14 @@ const routes: Routes = [
 			// 	path: 'builder',
 			// 	loadChildren: './builder/builder.module#BuilderModule'
 			// },
-			{
-				path: 'header/actions',
-				component: ActionComponent
-			},
-			{
-				path: 'profile',
-				component: ProfileComponent
-			}
+			// {
+			// 	path: 'header/actions',
+			// 	component: ActionComponent
+			// },
+			// {
+			// 	path: 'profile',
+			// 	component: ProfileComponent
+			// }
 		]
 	},
 	{
