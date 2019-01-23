@@ -3,7 +3,7 @@
 	<ng-container mPortletHeadTitle>
 		<div class="m-portlet__head-title">
 			<h3 class="m-portlet__head-text">
-				Recent Products
+				最新产品
 			</h3>
 		</div>
 	</ng-container>
@@ -22,44 +22,44 @@
 				</ng-container>
 
 				<ng-container matColumnDef="cManufacture">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Manufacture</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>特性</th>
 					<td mat-cell *matCellDef="let product">{{product.cManufacture}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cModel">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Model</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>型号</th>
 					<td mat-cell *matCellDef="let product">{{product.cModel}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cModelYear">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Model Year</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>年度</th>
 					<td mat-cell *matCellDef="let product">{{product.cModelYear}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cMileage">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Mileage</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>里程</th>
 					<td mat-cell *matCellDef="let product">{{product.cMileage}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cColor">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Color</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>颜色</th>
 					<td mat-cell *matCellDef="let product" [ngStyle]="{ 'color' : product.cColor }">{{product.cColor}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cPrice">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Price</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>价格</th>
 					<td mat-cell *matCellDef="let product">${{product.cPrice}}</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cStatus">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Status</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>状态</th>
 					<td mat-cell *matCellDef="let product">
 						<span class="m-badge m-badge--{{ getItemCssClassByStatus(product.cStatus) }} m-badge--wide">{{ getItemStatusString(product.cStatus) }}</span>
 					</td>
 				</ng-container>
 
 				<ng-container matColumnDef="cCondition">
-					<th mat-header-cell *matHeaderCellDef mat-sort-header>Condition</th>
+					<th mat-header-cell *matHeaderCellDef mat-sort-header>条件</th>
 					<td mat-cell *matCellDef="let product">
 						<span class="m-badge m-badge--{{ getItemCssClassByCondition(product.cCondition) }} m-badge--dot"></span>&nbsp;
 						<span class="m--font-bold m--font-{{ getItemCssClassByCondition(product.cCondition) }}">{{ getItemConditionString(product.cCondition) }}</span>
@@ -68,7 +68,7 @@
 
 				<ng-container matColumnDef="actions">
 					<th mat-header-cell *matHeaderCellDef>
-						Actions
+						操作
 					</th>
 					<td mat-cell *matCellDef="let product">
 						<button mat-icon-button color="primary" matTooltip="Edit item">
