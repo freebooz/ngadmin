@@ -9,6 +9,7 @@ import { TopbarComponent } from './header/topbar/topbar.component';
 import { NotificationComponent } from './header/notification/notification.component';
 import { UserProfileComponent } from './header/user-profile/user-profile.component';
 import { MenuSectionComponent } from './aside/menu-section/menu-section.component';
+import { MainComponent } from './main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { MenuSectionComponent } from './aside/menu-section/menu-section.componen
     NotificationComponent,
     UserProfileComponent,
     MenuSectionComponent,
+    MainComponent,
   ],
   imports: [
     RouterModule,
