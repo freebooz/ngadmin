@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { AuthComponent } from './auth/auth.component';
 import { MainComponent } from './home/home.component';
 import { CoreModule } from '../core/core.module';
+import { PagesComponent } from './pages.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { CoreModule } from '../core/core.module';
     ActionComponent,
     ErrorPageComponent,
     ProfileComponent,
+    PagesComponent,
   ],
   imports: [
     CommonModule,
