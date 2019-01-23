@@ -3,7 +3,7 @@ import { NgModule } from '@angular/core';
 import { TranslateModule } from '@ngx-translate/core';
 import { HttpClientModule } from '@angular/common/http';
 
-// import 'hammerjs';
+import 'hammerjs';
 import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
@@ -14,8 +14,8 @@ import { AuthModule } from './pages/auth/auth.module';
 // import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 // import { FakeApiService } from './fake-api/fake-api.service';
 
-// import { LayoutModule } from './content/layout/layout.module';
-// import { PartialsModule } from './content/partials/partials.module';
+import { LayoutModule } from './layout/layout.module';
+import { PartialsModule } from './pages/partials/partials.module';
 import { CoreModule } from './core/core.module';
 import { AclService } from './core/services/acl.service';
 import { LayoutConfigService } from './core/services/layout-config.service';
@@ -61,8 +61,8 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		HttpClientModule,
 		PagesModule,
 		// environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forRoot(FakeApiService) : [],
-		// LayoutModule,
-		// PartialsModule,
+		LayoutModule,
+		PartialsModule,
 		CoreModule,
 		OverlayModule,
 		AuthenticationModule,
