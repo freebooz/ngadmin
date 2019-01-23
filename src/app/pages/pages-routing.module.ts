@@ -55,14 +55,14 @@ const routes: Routes = [
 			// 	path: 'builder',
 			// 	loadChildren: './builder/builder.module#BuilderModule'
 			// },
-			{
-				path: 'header/actions',
-				component: ActionComponent
-			},
-			{
-				path: 'profile',
-				component: ProfileComponent
-			}
+			// {
+			// 	path: 'header/actions',
+			// 	component: ActionComponent
+			// },
+			// {
+			// 	path: 'profile',
+			// 	component: ProfileComponent
+			// }
 		]
 	},
 	{
