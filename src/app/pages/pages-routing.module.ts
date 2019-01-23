@@ -21,7 +21,7 @@ const routes: Routes = [
 		children: [
 			{
 				path: '',
-				loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
+				loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
 			},
 			// {
 			// 	path: 'mail',
@@ -68,7 +68,7 @@ const routes: Routes = [
 	{
 		path: 'login',
 		canActivate: [NgxPermissionsGuard],
-		loadChildren: './auth/auth.module#AuthModule',
+		loadChildren: '../pages/auth/auth.module#AuthModule',
 		data: {
 			permissions: {
 				except: 'ADMIN'

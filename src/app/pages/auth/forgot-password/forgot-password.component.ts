@@ -7,11 +7,11 @@ import {
 	ElementRef
 } from '@angular/core';
 import { Subject } from 'rxjs';
-import { AuthenticationService } from '../../../../core/auth/authentication.service';
+import { AuthenticationService } from '../../../core/auth/authentication.service';
 import { NgForm } from '@angular/forms';
 import * as objectPath from 'object-path';
-import { AuthNoticeService } from '../../../../core/auth/auth-notice.service';
-import { SpinnerButtonOptions } from '../../../partials/content/general/spinner-button/button-options.interface';
+import { AuthNoticeService } from '../../../core/auth/auth-notice.service';
+import { SpinnerButtonOptions } from '../../partials/content/general/spinner-button/button-options.interface';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
