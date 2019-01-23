@@ -12,7 +12,6 @@ import { ProductCateEditComponent } from './content/view/product-cate-edit/produ
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatCheckboxModule, MatToolbarModule, MatSidenavModule, MatListModule, MatIconModule } from '@angular/material';
 
-
 @NgModule({
   declarations: [
     AppComponent,    

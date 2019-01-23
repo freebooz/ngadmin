@@ -18,11 +18,10 @@ import { locale as chLang } from './config/i18n/ch';
 })
 
 export class AppComponent implements AfterViewInit, OnInit {
-  title = 'Metronic';
+  title = 'admin';
 
   @HostBinding('style') style: any;
   @HostBinding('class') classes: any = '';
-
   @ViewChild('splashScreen', { read: ElementRef })
   splashScreen: ElementRef;
   splashScreenImage: string;
@@ -43,6 +42,7 @@ export class AppComponent implements AfterViewInit, OnInit {
       setTimeout(() => this.classes = classes.body.join(' '));
     });
 
+    alert("调试这里！");
     this.layoutConfigService.onLayoutConfigUpdated$.subscribe(model => {
       this.classInitService.setConfig(model);
 

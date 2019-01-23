@@ -9,7 +9,6 @@ import { LayoutConfig } from '../../config/layout';
 @Injectable()
 export class LayoutConfigService {
 	public layoutConfig: LayoutConfig;
-
 	public onLayoutConfigUpdated$: BehaviorSubject<LayoutConfig>;
 
 	constructor(
@@ -17,6 +16,7 @@ export class LayoutConfigService {
 		private utils: UtilsService,
 		private layoutConfigStorageService: LayoutConfigStorageService
 	) {
+		console.log("start debug.......");
 		// default config
 		this.layoutConfig = new LayoutConfig();
 		// register on config changed event and set default config
