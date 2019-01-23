@@ -8,7 +8,6 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-
 import { AuthenticationModule } from './core/auth/authentication.module';
 import { NgxPermissionsModule } from 'ngx-permissions';
 
@@ -47,6 +46,8 @@ import { LayoutRefService } from './core/services/layout/layout-ref.service';
 import { SplashScreenService } from './core/services/splash-screen.service';
 import { DataTableService } from './core/services/datatable.service';
 
+import {PagesModule} from './pages/pages.module'
+
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	// suppressScrollX: true
 };
@@ -58,6 +59,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
+		PagesModule,
 		// environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forRoot(FakeApiService) : [],
 		// LayoutModule,
 		// PartialsModule,
@@ -69,7 +71,7 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		TranslateModule.forRoot(),
 		MatProgressSpinnerModule,
 	],
-	providers: [
+	providers: [		
 		AclService,
 		LayoutConfigService,
 		LayoutConfigStorageService,
