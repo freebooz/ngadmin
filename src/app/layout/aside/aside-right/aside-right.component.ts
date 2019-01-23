@@ -1,15 +1,14 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
-  selector: 'app-aside-right',
-  templateUrl: './aside-right.component.html',
-  styleUrls: ['./aside-right.component.css']
+	selector: 'm-aside-right',
+	templateUrl: './aside-right.component.html',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class AsideRightComponent implements OnInit {
+	@HostBinding('class') classes = 'm-grid__item m-aside-right';
 
-  constructor() { }
+	constructor() {}
 
-  ngOnInit() {
-  }
-
+	ngOnInit(): void {}
 }
