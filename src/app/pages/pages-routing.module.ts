@@ -21,7 +21,7 @@ const routes: Routes = [
 		children: [
 			{
 				path: '',
-				loadChildren: './components/dashboard/dashboard.module#DashboardModule'
+				loadChildren: './pages/dashboard/dashboard.module#DashboardModule'
 			},
 			// {
 			// 	path: 'mail',

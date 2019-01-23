@@ -26,6 +26,7 @@
     "@ngx-translate/core": "^11.0.1",
     "core-js": "^2.5.4",
     "ngx-auth": "^5.0.0",
+    "ngx-perfect-scrollbar": "^7.2.0",
     "ngx-permissions": "^6.0.5",
     "object-path": "^0.11.4",
     "rxjs": "~6.3.3",

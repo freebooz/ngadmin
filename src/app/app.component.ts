@@ -42,7 +42,6 @@ export class AppComponent implements AfterViewInit, OnInit {
       setTimeout(() => this.classes = classes.body.join(' '));
     });
 
-    alert("调试这里！");
     this.layoutConfigService.onLayoutConfigUpdated$.subscribe(model => {
       this.classInitService.setConfig(model);
 
