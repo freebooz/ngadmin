@@ -10,7 +10,7 @@ const routes: Routes = [
 	{
 		path: '',
 		component: PagesComponent,
-		canActivate: [NgxPermissionsGuard],
+		// canActivate: [NgxPermissionsGuard],
 		data: {
 			permissions: {
 				only: ['ADMIN', 'USER'],
@@ -22,11 +22,11 @@ const routes: Routes = [
 			{
 				path: '',
 				loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
-			}
-			// {
-			// 	path: 'mail',
-			// 	loadChildren: './components/apps/mail/mail.module#MailModule'
-			// },
+			},
+			{
+				path: 'mail',
+				loadChildren: './components/apps/mail/mail.module#MailModule'
+			},
 			// {
 			// 	path: 'ecommerce',
 			// 	loadChildren: './components/apps/e-commerce/e-commerce.module#ECommerceModule'

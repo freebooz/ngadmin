@@ -65,7 +65,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 			// 	this.cdr.detectChanges();
 			// });
 			this.spinner.active = false;
+			console.log('login success');
 			this.router.navigate(['/']);
+			this.cdr.detectChanges();
 		}
 	}
 
