@@ -470,15 +470,15 @@ export class MenuConfig {
                         submenu: [
                             {
                                 title: '商品类目信息',
-                                page: '/ecommerce/products'
+                                page: '/storageview/products'
                             },
                             {
                                 title: '商品档案信息',
-                                page: '/view/products'
+                                page: './storageview/products'
                             },
                             {
                                 title: '商品销售定价',
-                                page: '/view/products'
+                                page: '/storageview/products'
                             },
                         ]
                     },

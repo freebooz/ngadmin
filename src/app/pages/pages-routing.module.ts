@@ -23,14 +23,14 @@ const routes: Routes = [
 				path: '',
 				loadChildren: '../pages/dashboard/dashboard.module#DashboardModule'
 			},
-			{
-				path: 'mail',
-				loadChildren: './components/apps/mail/mail.module#MailModule'
-			},
 			// {
-			// 	path: 'ecommerce',
-			// 	loadChildren: './components/apps/e-commerce/e-commerce.module#ECommerceModule'
+			// 	path: 'mail',
+			// 	loadChildren: './components/apps/mail/mail.module#MailModule'
 			// },
+			{
+				path: 'storageview',
+				loadChildren: '../content/view/storageview.module#StorageViewModule'
+			},
 			// {
 			// 	path: 'ngbootstrap',
 			// 	loadChildren: './components/ngbootstrap/ngbootstrap.module#NgbootstrapModule'
