@@ -20876,7 +20876,6 @@ strong {
 .m-stack.m-stack--ver>.m-stack__item {
 	display: block;
 	height: auto;
-	background-color: #3f51b5;
 }
 
 .m-stack.m-stack--general {
@@ -55081,11 +55080,13 @@ body.m-content--skin-light2 {
 
 .m-page--wide .m-header,
 .m-page--fluid .m-header {
-	background-color: #fff
+	background-color: #fff;
+	color: white;
+    box-shadow: 0px 2px 5px 0px rgba(0,0,0,.3);
 }
 
 .m-page--boxed .m-header .m-header-head {
-	background-color: #fff
+	background: #1976d2;
 }
 
 @media (min-width: 1025px) {
@@ -55138,7 +55139,8 @@ body.m-content--skin-light2 {
 
 	body.m-aside-left--skin-dark .m-header .m-header-head {
 		-webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
-		box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1)
+		box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
+		background: #1976d2;
 	}
 
 	body.m-aside-left--skin-light .m-header {
@@ -55236,7 +55238,7 @@ body.m-content--skin-light2 {
 	line-height: 0;
 	vertical-align: middle;
 	padding: 0;
-	color: #ad5beb
+	color: ##ffffff
 }
 
 .m-topbar .m-topbar__nav.m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon>i {
@@ -55572,7 +55574,8 @@ body.m-content--skin-light2 {
 }
 
 .m-aside-left.m-aside-left--skin-dark {
-	background-color: #3f51b5
+	background-color: #1976d2;
+	box-shadow: 6px 0 6px rgba(0,0,0,.1);
 }
 
 .m-aside-left.m-aside-left--skin-light {

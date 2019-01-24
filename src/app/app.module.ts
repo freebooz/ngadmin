@@ -8,11 +8,12 @@ import { environment } from '../environments/environment';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+
 import { AuthenticationModule } from './core/auth/authentication.module';
 import { NgxPermissionsModule } from 'ngx-permissions';
-import { AuthModule } from './pages/auth/auth.module';
-// import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
-// import { FakeApiService } from './fake-api/fake-api.service';
+
+import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
+import { FakeApiService } from './fake-api/fake-api.service';
 
 import { LayoutModule } from './layout/layout.module';
 import { PartialsModule } from './pages/partials/partials.module';
@@ -46,8 +47,6 @@ import { LayoutRefService } from './core/services/layout/layout-ref.service';
 import { SplashScreenService } from './core/services/splash-screen.service';
 import { DataTableService } from './core/services/datatable.service';
 
-import { PagesModule } from './pages/pages.module'
-
 const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	// suppressScrollX: true
 };
@@ -59,7 +58,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 		BrowserModule,
 		AppRoutingModule,
 		HttpClientModule,
-		PagesModule,
 		// environment.isMockEnabled ? HttpClientInMemoryWebApiModule.forRoot(FakeApiService) : [],
 		LayoutModule,
 		PartialsModule,
@@ -73,7 +71,6 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	],
 	providers: [
 		AclService,
-		AuthModule,
 		LayoutConfigService,
 		LayoutConfigStorageService,
 		LayoutRefService,
@@ -105,4 +102,4 @@ const DEFAULT_PERFECT_SCROLLBAR_CONFIG: PerfectScrollbarConfigInterface = {
 	],
 	bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {}

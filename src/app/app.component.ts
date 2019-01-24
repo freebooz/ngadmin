@@ -9,70 +9,75 @@ import { PageConfigService } from './core/services/page-config.service';
 import { filter } from 'rxjs/operators';
 import { SplashScreenService } from './core/services/splash-screen.service';
 import { AclService } from './core/services/acl.service';
+// language list
 import { locale as chLang } from './config/i18n/ch';
 
+// LIST KNOWN ISSUES
+// [Violation] Added non-passive event listener; https://github.com/angular/angular/issues/8866
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+	// tslint:disable-next-line:component-selector
+	selector: 'body[m-root]',
+	templateUrl: './app.component.html',
+	changeDetection: ChangeDetectionStrategy.OnPush
 })
-
 export class AppComponent implements AfterViewInit, OnInit {
-  title = 'admin';
+	title = 'Metronic';
 
-  @HostBinding('style') style: any;
-  @HostBinding('class') classes: any = '';
-  @ViewChild('splashScreen', { read: ElementRef })
-  splashScreen: ElementRef;
-  splashScreenImage: string;
+	@HostBinding('style') style: any;
+	@HostBinding('class') classes: any = '';
 
-  constructor(
-    private layoutConfigService: LayoutConfigService,
-    private classInitService: ClassInitService,
-    private sanitizer: DomSanitizer,
-    private translationService: TranslationService,
-    private router: Router,
-    private pageConfigService: PageConfigService,
-    private splashScreenService: SplashScreenService,
-    private aclService: AclService
-  ) {
-    // subscribe to class update event
-    this.classInitService.onClassesUpdated$.subscribe(classes => {
-      // get body class array, join as string classes and pass to host binding class
-      setTimeout(() => this.classes = classes.body.join(' '));
-    });
+	@ViewChild('splashScreen', {read: ElementRef})
+	splashScreen: ElementRef;
+	splashScreenImage: string;
 
-    this.layoutConfigService.onLayoutConfigUpdated$.subscribe(model => {
-      this.classInitService.setConfig(model);
+	constructor(
+		private layoutConfigService: LayoutConfigService,
+		private classInitService: ClassInitService,
+		private sanitizer: DomSanitizer,
+		private translationService: TranslationService,
+		private router: Router,
+		private pageConfigService: PageConfigService,
+		private splashScreenService: SplashScreenService,
+		private aclService: AclService
+	) {
+		// subscribe to class update event
+		this.classInitService.onClassesUpdated$.subscribe(classes => {
+			// get body class array, join as string classes and pass to host binding class
+			setTimeout(() => this.classes = classes.body.join(' '));
+		});
 
-      this.style = '';
-      if (objectPath.get(model.config, 'self.layout') === 'boxed') {
-        const backgroundImage = objectPath.get(model.config, 'self.background');
-        if (backgroundImage) {
-          this.style = this.sanitizer.bypassSecurityTrustStyle('background-image: url(' + objectPath.get(model.config, 'self.background') + ')');
-        }
-      }
+		this.layoutConfigService.onLayoutConfigUpdated$.subscribe(model => {
+			this.classInitService.setConfig(model);
 
-      // splash screen image
-      this.splashScreenImage = objectPath.get(model.config, 'loader.image');
-    });
+			this.style = '';
+			if (objectPath.get(model.config, 'self.layout') === 'boxed') {
+				const backgroundImage = objectPath.get(model.config, 'self.background');
+				if (backgroundImage) {
+					this.style = this.sanitizer.bypassSecurityTrustStyle('background-image: url(' + objectPath.get(model.config, 'self.background') + ')');
+				}
+			}
 
-    // register translations
-    this.translationService.loadTranslations(chLang);
+			// splash screen image
+			this.splashScreenImage = objectPath.get(model.config, 'loader.image');
+		});
 
-    // override config by router change from pages config
-    this.router.events
-      .pipe(filter(event => event instanceof NavigationEnd))
-      .subscribe(event => {
-        this.layoutConfigService.setModel({ page: objectPath.get(this.pageConfigService.getCurrentPageConfig(), 'config') }, true);
-      });
-  }
+		// register translations
+		this.translationService.loadTranslations(chLang);
 
-  ngOnInit(): void { }
+		// override config by router change from pages config
+		this.router.events
+			.pipe(filter(event => event instanceof NavigationEnd))
+			.subscribe(event => {
+				this.layoutConfigService.setModel({page: objectPath.get(this.pageConfigService.getCurrentPageConfig(), 'config')}, true);
+			});
+	}
 
-  ngAfterViewInit(): void {
-    if (this.splashScreen) {
-      this.splashScreenService.init(this.splashScreen.nativeElement);
-    }
-  }
+	ngOnInit(): void {}
+
+	ngAfterViewInit(): void {
+		if (this.splashScreen) {
+			this.splashScreenService.init(this.splashScreen.nativeElement);
+		}
+	}
 }

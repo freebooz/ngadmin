@@ -55081,7 +55081,8 @@ body.m-content--skin-light2 {
 
 .m-page--wide .m-header,
 .m-page--fluid .m-header {
-	background-color: #fff
+	background-color: #fff;
+	color: white;
 }
 
 .m-page--boxed .m-header .m-header-head {
@@ -55138,7 +55139,7 @@ body.m-content--skin-light2 {
 
 	body.m-aside-left--skin-dark .m-header .m-header-head {
 		-webkit-box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1);
-		box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1)
+		box-shadow: 0px 1px 15px 1px rgba(69, 65, 78, 0.1)		
 	}
 
 	body.m-aside-left--skin-light .m-header {
@@ -55236,7 +55237,7 @@ body.m-content--skin-light2 {
 	line-height: 0;
 	vertical-align: middle;
 	padding: 0;
-	color: #ad5beb
+	color: #ffffff
 }
 
 .m-topbar .m-topbar__nav.m-nav>.m-nav__item>.m-nav__link .m-nav__link-icon>i {
