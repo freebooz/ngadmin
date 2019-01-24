@@ -7,7 +7,7 @@ export class PagesConfig implements ConfigModel {
 		this.config = {
 			'/': {
 				page: {
-					title: 'Dashboard',
+					title: '综合概览',
 					desc: 'Latest updates and statistic charts'
 				}
 			},

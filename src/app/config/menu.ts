@@ -7,7 +7,7 @@ export class MenuConfig {
                 self: {},
                 items: [
                     {
-                        title: 'Actions',
+                        title: '操作',
                         root: true,
                         icon: 'flaticon-add',
                         toggle: 'click',
@@ -17,7 +17,7 @@ export class MenuConfig {
                             alignment: 'left',
                             items: [
                                 {
-                                    title: 'Create New Post',
+                                    title: '创建新帖子',
                                     page: '/header/actions',
                                     icon: 'flaticon-file',
                                     translate: 'MENU.CREATE_POST',
@@ -58,7 +58,7 @@ export class MenuConfig {
                                     }
                                 },
                                 {
-                                    title: 'Generate Reports',
+                                    title: '报表生成',
                                     tooltip: 'Non functional dummy link',
                                     icon: 'flaticon-diagram',
                                     badge: {
@@ -67,7 +67,7 @@ export class MenuConfig {
                                     },
                                 },
                                 {
-                                    title: 'Manage Orders',
+                                    title: '订单管理',
                                     icon: 'flaticon-business',
                                     submenu: {
                                         type: 'classic',
@@ -108,7 +108,7 @@ export class MenuConfig {
                                     }
                                 },
                                 {
-                                    title: 'Customer Feedbacks',
+                                    title: '客户反馈',
                                     page: '/#',
                                     icon: 'flaticon-chat-1',
                                     submenu: {
@@ -145,7 +145,7 @@ export class MenuConfig {
                                     }
                                 },
                                 {
-                                    title: 'Register Member',
+                                    title: '注册会员',
                                     tooltip: 'Non functional dummy link',
                                     icon: 'flaticon-users',
                                 }
@@ -359,7 +359,7 @@ export class MenuConfig {
                                     }
                                 },
                                 {
-                                    title: 'Audience',
+                                    title: '认证',
                                     page: '/crud/datatable_v1',
                                     icon: 'flaticon-computer',
                                     submenu: {
@@ -459,7 +459,7 @@ export class MenuConfig {
                         icon: 'flaticon-line-graph',
                         page: '/',
                         badge: { type: 'm-badge--danger', value: '2' },
-                        translate: 'MENU.DASHBOARD'
+                        translate: '数据可视化仪表盘'
                     },
                     { section: '商品业务经营管理' },
                     {
