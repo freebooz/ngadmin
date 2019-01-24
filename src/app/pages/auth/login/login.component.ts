@@ -55,15 +55,17 @@ export class LoginComponent implements OnInit, OnDestroy {
 	submit() {
 		this.spinner.active = true;
 		if (this.validate(this.f)) {
-			this.authService.login(this.model).subscribe(response => {
-				if (typeof response !== 'undefined') {
-					this.router.navigate(['/']);
-				} else {
-					this.authNoticeService.setNotice(this.translate.instant('AUTH.VALIDATION.INVALID_LOGIN'), 'error');
-				}
-				this.spinner.active = false;
-				this.cdr.detectChanges();
-			});
+			// this.authService.login(this.model).subscribe(response => {
+			// 	if (typeof response !== 'undefined') {
+			// 		this.router.navigate(['/']);
+			// 	} else {
+			// 		this.authNoticeService.setNotice(this.translate.instant('AUTH.VALIDATION.INVALID_LOGIN'), 'error');
+			// 	}
+			// 	this.spinner.active = false;
+			// 	this.cdr.detectChanges();
+			// });
+			this.spinner.active = false;
+			this.router.navigate(['/']);
 		}
 	}
 
