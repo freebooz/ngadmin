@@ -15,7 +15,7 @@ export const locale = {
 		},
 		AUTH: {
 			GENERAL: {
-				OR: '要么',
+				OR: '第三方登录',
 				SUBMIT_BUTTON: '提交',
 				NO_ACCOUNT: '没有账号？',
 				SIGNUP_BUTTON: '注册',
@@ -27,20 +27,20 @@ export const locale = {
 			},
 			LOGIN: {
 				TITLE: '创建帐号',
-				BUTTON: '签到',
+				BUTTON: '登录',
 			},
 			FORGOT: {
-				TITLE: 'Forgotten Password?',
+				TITLE: '忘记密码?',
 				DESC: 'Enter your email to reset your password',
 			},
 			REGISTER: {
-				TITLE: 'Sign Up',
+				TITLE: '注册',
 				DESC: 'Enter your details to create your account',
 				SUCCESS: 'Your account has been successfuly registered. Please use your registered account to login.'
 			},
 			INPUT: {
-				EMAIL: 'Email',
-				FULLNAME: 'Fullname',
+				EMAIL: '邮箱',
+				FULLNAME: '全名',
 				PASSWORD: 'Password',
 				CONFIRM_PASSWORD: 'Confirm Password',
 			},

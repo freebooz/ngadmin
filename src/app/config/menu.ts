@@ -474,11 +474,11 @@ export class MenuConfig {
                             },
                             {
                                 title: '商品档案信息',
-                                page: '/ecommerce/products'
+                                page: '/view/products'
                             },
                             {
                                 title: '商品销售定价',
-                                page: '/ecommerce/products'
+                                page: '/view/products'
                             },
                         ]
                     },

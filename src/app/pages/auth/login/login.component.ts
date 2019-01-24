@@ -70,9 +70,9 @@ export class LoginComponent implements OnInit, OnDestroy {
 	ngOnInit(): void {
 		// demo message to show
 		if (!this.authNoticeService.onNoticeChanged$.getValue()) {
-			const initialNotice = `Use account
-			<strong>admin@demo.com</strong> and password
-			<strong>demo</strong> to continue.`;
+			const initialNotice = `使用默认账户
+			<strong>admin@demo.com</strong> 和密码
+			<strong>demo</strong> 登录.`;
 			this.authNoticeService.setNotice(initialNotice, 'success');
 		}
 	}
